@@ -1,0 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+}
+
+nav {
+  height: 60px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  float: left;
+  padding-left: 24px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #2cb1c7;
+}
+.active {
+  color: #2cb1c7;
+}
+
+main {
+  /* height: calc(100vh - 106px); */
+  height: calc(100vh - 60px);
+  background-color: #e3e3e3;
+}
+
+footer div {
+  height: 50px;
+  background-color: black;
+  color: white;
+}
