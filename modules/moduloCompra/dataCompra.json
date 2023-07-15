@@ -1,0 +1,83 @@
+
+[
+    {
+        "id_compra": "1",
+        "detalle_de_compra": "Medicamento A",
+        "estatus": "Completado",
+        "cantidad": "5",
+        "fecha_y_hora": "2023-07-14 10:30:00",
+        "codigo_empleado": "E001"
+    },
+    {
+        "id_compra": "2",
+        "detalle_de_compra": "Vendaje B",
+        "estatus": "En proceso",
+        "cantidad": "3",
+        "fecha_y_hora": "2023-07-14 14:45:00",
+        "codigo_empleado": "E002"
+    },
+    {
+        "id_compra": "3",
+        "detalle_de_compra": "Analgésico C",
+        "estatus": "Completado",
+        "cantidad": "10",
+        "fecha_y_hora": "2023-07-15 09:15:00",
+        "codigo_empleado": "E003"
+    },
+    {
+        "id_compra": "4",
+        "detalle_de_compra": "Crema D",
+        "estatus": "Completado",
+        "cantidad": "2",
+        "fecha_y_hora": "2023-07-16 16:20:00",
+        "codigo_empleado": "E004"
+    },
+    {
+        "id_compra": "5",
+        "detalle_de_compra": "Antibiótico E",
+        "estatus": "Completado",
+        "cantidad": "7",
+        "fecha_y_hora": "2023-07-17 11:10:00",
+        "codigo_empleado": "E005"
+    },
+    {
+        "id_compra": "6",
+        "detalle_de_compra": "Jarabe F",
+        "estatus": "En proceso",
+        "cantidad": "4",
+        "fecha_y_hora": "2023-07-18 13:55:00",
+        "codigo_empleado": "E006"
+    },
+    {
+        "id_compra": "7",
+        "detalle_de_compra": "Suplemento G",
+        "estatus": "Completado",
+        "cantidad": "6",
+        "fecha_y_hora": "2023-07-19 08:40:00",
+        "codigo_empleado": "E007"
+    },
+    {
+        "id_compra": "8",
+        "detalle_de_compra": "Antiséptico H",
+        "estatus": "Completado",
+        "cantidad": "3",
+        "fecha_y_hora": "2023-07-20 15:25:00",
+        "codigo_empleado": "E008"
+    },
+    {
+        "id_compra": "9",
+        "detalle_de_compra": "Pomada I",
+        "estatus": "Completado",
+        "cantidad": "1",
+        "fecha_y_hora": "2023-07-21 12:05:00",
+        "codigo_empleado": "E009"
+    },
+    {
+        "id_compra": "10",
+        "detalle_de_compra": "Vitaminas J",
+        "estatus": "Completado",
+        "cantidad": "9",
+        "fecha_y_hora": "2023-07-22 17:30:00",
+        "codigo_empleado": "E010"
+    }
+]

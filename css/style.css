@@ -54,13 +54,14 @@ main{
   width: calc(100vw - 70px);
   height: 100vh;
 }
+
 .contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-}
+} 
 
 .inferior img{
   position: relative;
@@ -74,7 +75,7 @@ main{
   background-color: rgba(192, 192, 192, 0.7);
   width: 45%;
   height: 230px;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
   text-align: center;
   display: flex;

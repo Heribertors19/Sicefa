@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+  <title>Sicefa Central</title>
 </head>
-<body>
+<body onload="home()">
   <header>
     <nav>
       <div class="icons">
         <ul>
-          <li><button><i class="fa-solid fa-house active"></i></button></li>
-          <li><button><i class="fa-solid fa-truck-fast"></i></button></li>
-          <li><button><i class="fa-solid fa-syringe"></i></button></li>
-          <li><button><i class="fa-solid fa-user-tie"></i></button></li>
-          <li><button><i class="fa-solid fa-user"></i></button></li>
-          <li><button><i class="fa-solid fa-store"></i></button></li>
+          <li><button onclick="home();"><i id="home" class="fa-solid fa-house active"></i></button></li>
+          <li><button onclick="sucursal();"><i id="sucursal" class="fa-solid fa-store"></i></button></li>
+          <li><button onclick="producto();"><i id="producto" class="fa-solid fa-syringe"></i></button></li>
+          <li><button onclick="pedido();"><i id="pedido" class="fa-solid fa-truck-fast"></i></button></li>
         </ul>
       </div>
       <div class="icons" id="abajo">
@@ -28,14 +28,15 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main id="miMain">
     <!-- Codigo insertado desde JS -->
     <div class="contenedor">
       <div class="inferior"><img src="./img/logo.png" alt=""></div>
-      <div class="superior">Bienvenido a Sicefa Sucursal</div>
+      <div class="superior">Bienvenido a Sicefa Cental</div>
     </div>
   </main>
   <footer>
+    <script src="./js/ctrlSicefaCentral.js"></script>
     <script src="https://kit.fontawesome.com/c0424d8c9c.js" crossorigin="anonymous"></script>
   </footer>
 </body>

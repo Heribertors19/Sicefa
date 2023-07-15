@@ -1,0 +1,62 @@
+[
+    {
+        "id_sucursal": "1",
+        "telefono": "477111111",
+        "nombre": "Matriz",
+        "nombre_titular": "Juan Pérez",
+        "rfc_titular": "PERJ800101",
+        "estatus": "Activo",
+        "latitud": "21.1513918",
+        "longitud": "-101.6881073",
+        "cp": "31180",
+        "estado": "Guanajuato",
+        "ciudad": "León",
+        "colonia": "Futurama Monterrey",
+        "domicilio": "Lunik 216"
+    },
+    {
+        "id_sucursal": "2",
+        "telefono": "477222222",
+        "nombre": "Centro",
+        "nombre_titular": "María García",
+        "rfc_titular": "GARM900202",
+        "estatus": "Activo",
+        "latitud": "21.1242016",
+        "longitud": "-101.6821193",
+        "cp": "37000",
+        "estado": "Guanajuato",
+        "ciudad": "León",
+        "colonia": "Centro",
+        "domicilio": "Calle Hidalgo 211"
+    },
+    {
+        "id_sucursal": "3",
+        "telefono": "477333333",
+        "nombre": "Centro Max",
+        "nombre_titular": "Carlos López",
+        "rfc_titular": "LOCC850303",
+        "estatus": "Activo",
+        "latitud": "21.1000744",
+        "longitud": "-101.6357818",
+        "cp": "37530",
+        "estado": "Guanajuato",
+        "ciudad": "León",
+        "colonia": "Jardines de Jerez",
+        "domicilio": "Blvd. Adolfo López Mateos 2518"
+    },
+    {
+        "id_sucursal": "4",
+        "telefono": "477444444",
+        "nombre": "Plaza Mayor",
+        "nombre_titular": "Ana Rodríguez",
+        "rfc_titular": "ROAA950404",
+        "estatus": "Activo",
+        "latitud": "21.1578058",
+        "longitud": "-101.6950851",
+        "cp": "37150",
+        "estado": "Guanajuato",
+        "ciudad": "León",
+        "colonia": "Valle del Campestre",
+        "domicilio": "Blvd. Juan Alonso de Torres Pte. 2002"
+    }
+]
