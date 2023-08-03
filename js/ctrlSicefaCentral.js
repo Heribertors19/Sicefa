@@ -38,19 +38,9 @@ function producto() {
 }
 
 function pedido() {
-    fetch("../modules/moduloCompra/vistaCompra.html")
-    .then( 
-        function (response) {return response.text()}
-    )
-    .then(
-        function (html) {
-            changeActive("pedido");
-            main.innerHTML = html;
-            import("../modules/moduloCompra/controllerCompra.js").then((module) => {
-                module.añadirCampos();
-            });
-        }
-    );
+    let html = "";
+    changeActive("pedido");
+    main.innerHTML = html;
 }
 function changeActive(element) {
     let icon;

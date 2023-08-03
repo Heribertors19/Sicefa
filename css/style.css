@@ -42,6 +42,9 @@ nav li i:hover, .active{
   background-color: black;
   color: white;
 }
+svg:hover {
+  fill: black;
+}
 
 #abajo {
   position: absolute;

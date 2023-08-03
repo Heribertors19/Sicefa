@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 header {
@@ -16,6 +17,8 @@ nav {
 }
 nav ul {
   list-style: none;
+  margin-bottom: 0px;
+  padding-left: 0px;
 }
 nav ul li {
   float: left;
@@ -33,13 +36,26 @@ a:hover {
 }
 
 main {
-  /* height: calc(100vh - 106px); */
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 110px);
   background-color: #e3e3e3;
 }
 
 footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   background-color: black;
   color: white;
+}
+footer div p {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+/* Bootstrap*/
+
+.card {
+  width: calc(100% - 40px);
+  margin-left: 20px;
 }

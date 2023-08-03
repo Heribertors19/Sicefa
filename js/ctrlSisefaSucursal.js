@@ -16,9 +16,19 @@ function home() {
 }
 
 function pedido() {
-    let html = "";
-    changeActive("pedido")
-    main.innerHTML = html;
+    fetch("../modules/moduloCompra/vistaCompra.html")
+    .then( 
+        function (response) {return response.text()}
+    )
+    .then(
+        function (html) {
+            changeActive("pedido");
+            main.innerHTML = html;
+            import("../modules/moduloCompra/controllerCompra.js").then((module) => {
+                module.añadirCampos();
+            });
+        }
+    );
 }
 
 function producto() {
