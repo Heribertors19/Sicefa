@@ -1,0 +1,139 @@
+let empleados[];
+let empleado{};
+let indiceEmpleadoSeleccionado;
+
+function mostrarGenero(genero){
+    switch(genero){
+        case 1: return "Femenino";
+        case 2: return "Masculino";
+        case 3: return "No binario";
+        default: return "No definido";
+    }
+}
+
+export function loadTable(estatus){
+    let cuerpo = "";
+    empleados.forEach(function (empleado) {
+        let genero = empleado.persona.genero;
+        if (estatus == 1 && empleado.estatus == 1) {
+            let registro =
+                '<tr onclick = "moduloEmpleadoNv.seleccionarEmpleado(' + empleados.indexof(empleado) + '); ">' +
+                '<td>' + empleado.persona.nombre + '</td>'
+                '<td>' + empleado.persona.a_Paterno + '</td>'
+                '<td>' + empleado.persona.a_Materno + '</td>'
+                '<td>' + mostrarGenero(genero) + '</td>'
+                '<td>' + empleado.usuario.usuario + '</td>'
+                '<td>' + empleado.usuario.contrasenia + '</td>'
+                '<td>' + empleado.sucursal.nombre + '</td>'
+                '<td>' + empleado.puesto + '</td>'
+                '<td>' + empleado.fecha_ingreso + '</td>'
+                cuerpo += registro;
+        } else if (estatus == 0 && empleado.estatus == 0) {
+            let registro =
+                '<tr onclick = "moduloEmpleadoNv.seleccionarEmpleado(' + empleados.indexof(empleado) + '); ">' +
+                '<td>' + empleado.persona.nombre.nombre + '</td>'
+                '<td>' + empleado.persona.nombre.a_Paterno + '</td>'
+                '<td>' + empleado.persona.nombre.a_Materno + '</td>'
+                '<td>' + mostrarGenero(genero) + '</td>'
+                '<td>' + empleado.usuario.usuario + '</td>'
+                '<td>' + empleado.usuario.contrasenia + '</td>'
+                '<td>' + empleado.sucursal.nombre + '</td>'
+                '<td>' + empleado.puesto + '</td>'
+                '<td>' + empleado.fecha_ingreso + '</td>'
+                cuerpo += registro;
+        }
+    });
+    document.getElementById("tblEmpleados").innerHTML = cuerpo;
+}
+
+fetch ("modulos/moduloEmpleadoNv/Datta.json")
+    .then (
+        Response => {
+            return Response.json();
+        })
+    .then (
+        function (jsondata){
+            empleados=jsondata;
+            loadTable(1);
+        }
+    );
+
+export function agregarEmpleado(){
+    let fechar, dia, mes, annio;
+    let cliente={};
+    let persona={};
+    let usuario={};
+    let folio, nombre, a_Paterno, a_Materno, genero, fecha_ing, contrasenia;
+
+    nombre = document.getElementById("").value;
+    a_Materno = document.getElementById("").value;
+    a_Paterno= document.getElementById("").value;
+
+    let gen = document.querySelector('').value;
+
+    switch(gen){
+        
+        case "femenino": genero = 1; break;
+        case "masculino": genero = 1; break;
+        case "nobinario": genero = 1; break;
+    }
+    persona.nombre = nombre;
+    persona.a_Paterno = a_Paterno;
+    persona.a_Materno = a_Materno;
+    persona.genero = genero;
+
+    empleado.persona = persona;
+
+    fechar = new Date();
+    annio = fechar.getFullYear();
+
+    if ((fechar.getMonth()+1)<10) {
+        mes = "0" + (fechar.getMonth()+1);
+    } else mes = ""+ (fechar.getMonth()+1);
+
+    if ((fechar.getDate())) {
+        dia = "0" + (fechar.getDate());
+    } else dia = "" + (fechar.getDate()+1);
+    
+    dia = fechar.getDate();
+    fecha_ing = annio + "-" + mes + "-" + dia;
+
+    folio = "" + a_Paterno.fecharat(0) + a_Materno.charAt(0) + annio + mes + dia;
+    usuario.contrasenia = folio;
+    usuario.usuario = folio;
+    empleado.usuario = usuario;
+    empleado.fecha_de_ingreso = fecha_ing;
+
+    empleado.push(empleado);
+    loadTable(1);
+}
+
+export function seleccionarEmpleado(indice){
+    let gen = empleados[indice].persona.genero;
+    document.getElementById("").value = empleados[indice].persona.nombre;
+    document.getElementById("").value = empleados[indice].persona.a_Paterno;
+    document.getElementById("").value = empleados[indice].persona.a_Materno;
+    document.getElementById("").value = empleados[indice].usuario.usuario;
+    document.getElementById("").value = empleados[indice].usuario.contrasenia;
+
+    switch(gen){
+        case 1: document.getElementById("").checked = true; break;
+        case 2: document.getElementById("").checked = true; break;
+        case 3: document.getElementById("").checked = true; break;
+    }
+    indiceEmpleadoSeleccionado = indice;
+}
+
+export function eliminarEmpleado(){
+    clientes[indiceEmpleadoSeleccionado].estatus=0;
+    clear();
+    loadTable(1);
+}
+
+export function validarEstatus(estatus){
+    let checkbox = document.getElementById('');
+    if(checkbox.checked)
+        loadTable(0);
+    else 
+        loadTable(1);
+}
